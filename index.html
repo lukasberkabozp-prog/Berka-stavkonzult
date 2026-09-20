@@ -3,15 +3,19 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Berka - Stavkonzult, s.r.o. | Služby v oblasti BOZP a PO</title>
+    <title>Berka - Stavkonzult, s.r.o. | BOZP a PO Olomouc</title>
     <style>
         :root {
-            --primary-color: #10b981; /* Zelená barva podle loga */
-            --primary-dark: #059669;
+            --primary-color: #22c55e; /* Zelená barva podle loga */
+            --primary-dark: #16a34a;
             --text-color: #334155;
             --bg-light: #f8fafc;
             --white: #ffffff;
-            --gray-border: #e2e8f0;
+            --gray-dark: #334155;
+        }
+
+        html {
+            scroll-behavior: smooth; /* Plynulý přechod při kliknutí na menu */
         }
 
         * {
@@ -38,26 +42,29 @@
         .header-container {
             max-width: 1200px;
             margin: 0 auto;
-            padding: 1rem 2rem;
+            padding: 0.75rem 2rem;
             display: flex;
             justify-content: space-between;
             align-items: center;
             flex-wrap: wrap;
         }
 
-        .logo h1 {
-            font-size: 1.5rem;
-            color: #1e293b;
+        /* Styl pro logo */
+        .logo-container {
+            display: flex;
+            align-items: center;
+            text-decoration: none;
         }
 
-        .logo h1 span {
-            color: var(--primary-color);
+        .logo-svg {
+            height: 45px;
+            width: auto;
         }
 
         nav ul {
             display: flex;
             list-style: none;
-            gap: 1.5rem;
+            gap: 2rem;
             flex-wrap: wrap;
         }
 
@@ -127,6 +134,74 @@
             color: #64748b;
         }
 
+        /* Sekce O nás */
+        .about-section {
+            background: var(--white);
+            border-radius: 12px;
+            padding: 3rem;
+            box-shadow: 0 4px 6px rgba(0,0,0,0.02);
+            margin-bottom: 3rem;
+        }
+
+        .about-text h3 {
+            color: #1e293b;
+            font-size: 1.4rem;
+            margin-top: 1.5rem;
+            margin-bottom: 0.75rem;
+        }
+
+        .about-text p {
+            margin-bottom: 1rem;
+            color: #475569;
+        }
+
+        .about-text ul {
+            list-style-type: disc;
+            margin-left: 1.5rem;
+            margin-bottom: 1.5rem;
+            color: #475569;
+        }
+
+        .about-text li {
+            margin-bottom: 0.5rem;
+        }
+
+        .team-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+            gap: 1.5rem;
+            margin-top: 1.5rem;
+        }
+
+        .team-card {
+            background: var(--bg-light);
+            padding: 1.5rem;
+            border-radius: 8px;
+            border-left: 4px solid var(--primary-color);
+        }
+
+        .team-card strong {
+            font-size: 1.15rem;
+            color: #1e293b;
+            display: block;
+            margin-bottom: 0.5rem;
+        }
+
+        .team-card p {
+            margin-bottom: 0.25rem;
+            font-size: 0.95rem;
+        }
+
+        .team-card a {
+            color: var(--primary-dark);
+            text-decoration: none;
+            font-weight: 500;
+        }
+
+        .team-card a:hover {
+            text-decoration: underline;
+        }
+
         .services-grid {
             display: grid;
             grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
@@ -184,6 +259,16 @@
             color: #cbd5e1;
         }
 
+        .contact-info a {
+            color: #cbd5e1;
+            text-decoration: none;
+        }
+
+        .contact-info a:hover {
+            color: var(--white);
+            text-decoration: underline;
+        }
+
         footer {
             background: #0f172a;
             color: #94a3b8;
@@ -200,6 +285,7 @@
             }
             nav ul {
                 justify-content: center;
+                gap: 1rem;
             }
             .hero h2 {
                 font-size: 2rem;
@@ -211,13 +297,20 @@
 
     <header>
         <div class="header-container">
-            <div class="logo">
-                <h1>BERKA <span>STAVKONZULT</span></h1>
-            </div>
+            <!-- Věrná podoba loga v grafice -->
+            <a href="#" class="logo-container">
+                <svg class="logo-svg" viewBox="0 0 420 70" xmlns="http://www.w3.org/2000/svg">
+                    <text x="0" y="42" font-family="'Segoe UI', Arial, sans-serif" font-weight="900" font-size="36" fill="#64748b" letter-spacing="1">BERKA</text>
+                    <text x="0" y="66" font-family="'Segoe UI', Arial, sans-serif" font-weight="800" font-size="20" fill="#22c55e" letter-spacing="1">STAVKONZULT</text>
+                    <text x="180" y="65" font-family="'Segoe UI', Arial, sans-serif" font-weight="600" font-size="14" fill="#64748b">s. r. o.</text>
+                    <!-- Symbol budov a čar z loga -->
+                    <path d="M220 60 L240 60 L240 25 L255 25 L255 60 L270 60 L270 10 L285 10 L285 60 L310 60" fill="none" stroke="#22c55e" stroke-width="3"/>
+                </svg>
+            </a>
             <nav>
                 <ul>
-                    <li><a href="#sluzby">Služby</a></li>
                     <li><a href="#o-nas">O nás</a></li>
+                    <li><a href="#sluzby">Služby</a></li>
                     <li><a href="#kontakt">Kontakt</a></li>
                 </ul>
             </nav>
@@ -230,54 +323,92 @@
         <a href="#kontakt" class="btn">Kontaktujte nás</a>
     </section>
 
-    <section id="sluzby" class="container">
-        <div class="section-title">
-            <h2>Naše odborné služby</h2>
-            <p>Profesionální řešení na míru pro firmy, živnostníky i stavebníky</p>
-        </div>
+    <div class="container">
+        <!-- Sekce O nás -->
+        <section id="o-nas" class="about-section">
+            <div class="section-title" style="margin-bottom: 2rem;">
+                <h2>O společnosti Berka - Stavkonzult, s.r.o.</h2>
+                <p>Spolehlivý partner pro vaši bezpečnost a ochranu zdraví při práci</p>
+            </div>
+            <div class="about-text">
+                <p>Jsme stabilní rodinná firma, která se již téměř 20 let specializuje na komplexní služby v oblasti bezpečnosti a ochrany zdraví při práci (BOZP). Zakládáme si na spolehlivosti, odbornosti a individuálním přístupu ke každému klientovi – ať už jde o malé firmy, nebo velké stavební projekty.</p>
+                
+                <h3>Naše odbornost a kvalifikace</h3>
+                <p>Díky dlouholeté praxi a legislativnímu přehledu vám dokážeme zajistit bezpečné pracovní prostředí a plný soulad s platnými předpisy.</p>
+                <ul>
+                    <li>Odborně způsobilé osoby (OZO) v prevenci rizik</li>
+                    <li>Koordinátoři BOZP na staveništi (působení ve fázi přípravy i realizace stavby)</li>
+                    <li>Komplexní poradenství, audit a řešení na míru pro vaše podnikání</li>
+                </ul>
 
-        <div class="services-grid">
-            <div class="service-card">
-                <h3>🛡️ OZO v prevenci rizik</h3>
-                <p>Zajistíme plnění úkolů v prevenci rizik, kompletní audit BOZP, vyhodnocení rizik, pravidelné roční prověrky pracoviště dle § 108 zákoníku práce a zastupování při kontrolách.</p>
+                <h3>Náš tým a kontakty</h3>
+                <p>Za našimi výsledky stojí osobní odpovědnost a přímý kontakt s klienty. S čímkoliv potřebujete pomoci, obraťte se přímo na nás:</p>
+                
+                <div class="team-grid">
+                    <div class="team-card">
+                        <strong>Mgr. Jaroslav Berka</strong>
+                        <p>📞 Telefon: <a href="tel:+420722673633">(+420) 722 673 633</a></p>
+                        <p>✉️ E-mail: <a href="mailto:berka-stavkonzult@seznam.cz">berka-stavkonzult@seznam.cz</a></p>
+                    </div>
+                    <div class="team-card">
+                        <strong>Lukáš Berka</strong>
+                        <p>📞 Telefon: <a href="tel:+420735511009">(+420) 735 511 009</a></p>
+                        <p>✉️ E-mail: <a href="mailto:lukasberkabozp@gmail.com">lukasberkabozp@gmail.com</a></p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Sekce Služby -->
+        <section id="sluzby">
+            <div class="section-title">
+                <h2>Naše odborné služby</h2>
+                <p>Profesionální řešení na míru pro firmy, živnostníky i stavebníky</p>
             </div>
 
-            <div class="service-card">
-                <h3>📘 Školení BOZP a PO</h3>
-                <p>Školení přizpůsobená reálným rizikům ve vaší firmě. Zajišťujeme vstupní i opakovaná školení zaměstnanců, vedoucích, požární ochrany, prací ve výškách či referentských vozidel.</p>
-            </div>
+            <div class="services-grid">
+                <div class="service-card">
+                    <h3>🛡️ OZO v prevenci rizik</h3>
+                    <p>Zajistíme plnění úkolů v prevenci rizik, kompletní audit BOZP, vyhodnocení rizik, pravidelné roční prověrky pracoviště dle § 108 zákoníku práce a zastupování při kontrolách.</p>
+                </div>
 
-            <div class="service-card">
-                <h3>📋 Kategorizace prací</h3>
-                <p>Zákonná povinnost pro každého zaměstnavatele. Zmapujeme provozy, posoudíme pracovní pozice, zajistíme měření přes akreditované laboratoře a vyřídíme hlášení na hygieně.</p>
-            </div>
+                <div class="service-card">
+                    <h3>📘 Školení BOZP a PO</h3>
+                    <p>Školení přizpůsobená reálným rizikům ve vaší firmě. Zajišťujeme vstupní i opakovaná školení zaměstnanců, vedoucích, požární ochrany, prací ve výškách či referentských vozidel.</p>
+                </div>
 
-            <div class="service-card">
-                <h3>⚠️ Pracovní postupy a rizika</h3>
-                <p>Zpracujeme srozumitelné a praktické návody a postupy pro obsluhu strojů, manipulaci s nebezpečnými látkami či rizikové činnosti tak, aby chránily zdraví i majetek.</p>
-            </div>
+                <div class="service-card">
+                    <h3>📋 Kategorizace prací</h3>
+                    <p>Zákonná povinnost pro každého zaměstnavatele. Zmapujeme provozy, posoudíme pracovní pozice, zajistíme měření přes akreditované laboratoře a vyřídíme hlášení na hygieně.</p>
+                </div>
 
-            <div class="service-card">
-                <h3>📁 Provozní dokumentace</h3>
-                <p>Připravíme interní předpisy, příkazy ke svařování, předávací protokoly, místní provozní bezpečnostní předpisy (MPBP) a záznamy z kontrol přesně podle potřeb vašeho provozu.</p>
-            </div>
+                <div class="service-card">
+                    <h3>⚠️ Pracovní postupy a rizika</h3>
+                    <p>Zpracujeme srozumitelné a praktické návody a postupy pro obsluhu strojů, manipulaci s nebezpečnými látkami či rizikové činnosti tak, aby chránily zdraví i majetek.</p>
+                </div>
 
-            <div class="service-card">
-                <h3>🧴 Ochranné nápoje a mycí prostředky</h3>
-                <p>Zhodnotíme stupně znečištění a mikroklimatické podmínky. Nastavíme správný režim pro poskytování mycích prostředků a ochranných nápojů dle legislativy.</p>
-            </div>
+                <div class="service-card">
+                    <h3>📁 Provozní dokumentace</h3>
+                    <p>Připravíme interní předpisy, příkazy ke svařování, předávací protokoly, místní provozní bezpečnostní předpisy (MPBP) a záznamy z kontrol přesně podle potřeb vašeho provozu.</p>
+                </div>
 
-            <div class="service-card">
-                <h3>🦺 Osobní ochranné pracovní prostředky (OOPP)</h3>
-                <p>Sestavíme úsporný a přesný Seznam OOPP na míru jednotlivým pozicím, připravíme vnitřní směrnice, výdejové formuláře a nastavíme systém evidence a revizí.</p>
-            </div>
+                <div class="service-card">
+                    <h3>🧴 Ochranné nápoje a mycí prostředky</h3>
+                    <p>Zhodnotíme stupně znečištění a mikroklimatické podmínky. Nastavíme správný režim pro poskytování mycích prostředků a ochranných nápojů dle legislativy.</p>
+                </div>
 
-            <div class="service-card">
-                <h3>🏗️ Koordinátor BOZP na staveništi</h3>
-                <p>Povinnost pro stavby s více zhotoviteli. Zpracujeme Plán BOZP, zajistíme dohled na stavbě, koordinaci subdodavatelů a ochranu investora před vysokými pokutami.</p>
+                <div class="service-card">
+                    <h3>🦺 Osobní ochranné pracovní prostředky (OOPP)</h3>
+                    <p>Sestavíme úsporný a přesný Seznam OOPP na míru jednotlivým pozicím, připravíme vnitřní směrnice, výdejové formuláře a nastavíme systém evidence a revizí.</p>
+                </div>
+
+                <div class="service-card">
+                    <h3>🏗️ Koordinátor BOZP na staveništi</h3>
+                    <p>Povinnost pro stavby s více zhotoviteli. Zpracujeme Plán BOZP, zajistíme dohled na stavbě, koordinaci subdodavatelů a ochranu investora před vysokými pokutami.</p>
+                </div>
             </div>
-        </div>
-    </section>
+        </section>
+    </div>
 
     <section id="kontakt" class="contact-section">
         <div class="contact-container">
@@ -287,10 +418,10 @@
                 <p><strong>IČ:</strong> 03727866 | <strong>DIČ:</strong> CZ03727866</p>
             </div>
             <div class="contact-info">
-                <h3>Rychlý kontakt</h3>
-                <p><strong>Telefon:</strong> (+420) 722 673 633</p>
-                <p><strong>E-mail:</strong> berka-stavkonzult@seznam.cz</p>
-                <p><strong>Web:</strong> www.stavkonzult.cz</p>
+                <h3>Rychlé kontakty</h3>
+                <p><strong>Mgr. Jaroslav Berka:</strong> <a href="tel:+420722673633">(+420) 722 673 633</a></p>
+                <p><strong>Lukáš Berka:</strong> <a href="tel:+420735511009">(+420) 735 511 009</a></p>
+                <p><strong>E-mail:</strong> <a href="mailto:berka-stavkonzult@seznam.cz">berka-stavkonzult@seznam.cz</a></p>
             </div>
         </div>
     </section>
