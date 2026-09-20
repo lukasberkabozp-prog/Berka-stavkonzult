@@ -15,7 +15,7 @@
         }
 
         html {
-            scroll-behavior: smooth; /* Plynulý přechod při kliknutí na menu */
+            scroll-behavior: smooth;
         }
 
         * {
@@ -49,7 +49,6 @@
             flex-wrap: wrap;
         }
 
-        /* Styl pro logo */
         .logo-container {
             display: flex;
             align-items: center;
@@ -134,7 +133,6 @@
             color: #64748b;
         }
 
-        /* Sekce O nás */
         .about-section {
             background: var(--white);
             border-radius: 12px;
@@ -226,7 +224,7 @@
 
         .service-card summary {
             padding: 1.5rem;
-            font-size: 1.25rem;
+            font-size: 1.2rem;
             font-weight: 700;
             color: #1e293b;
             cursor: pointer;
@@ -410,11 +408,11 @@
             </div>
         </section>
 
-        <!-- Sekce Služby s rozbalovacími detaily -->
+        <!-- Sekce Služby s plným obsahem -->
         <section id="sluzby">
             <div class="section-title">
                 <h2>Naše odborné služby</h2>
-                <p>Kliknutím na službu zablokujete/zobrazíte podrobné informace</p>
+                <p>Kliknutím na název služby získáte kompletní podrobnosti</p>
             </div>
 
             <div class="services-list">
@@ -422,18 +420,23 @@
                 <details class="service-card">
                     <summary>🛡️ OZO v prevenci rizik: Kdo to je a proč je nepostradatelný?</summary>
                     <div class="service-body">
-                        <p>Zkratka OZO znamená Odborně způsobilá osoba k zajišťování úkolů v prevenci rizik (v praxi se často říká „bezpečnostní technik“). Je to odborník, který složil státní zkoušku z oblasti bezpečnosti a ochrany zdraví při práci (BOZP) a má ze zákona oprávnění tuto oblast pro firmy zastřešovat.</p>
+                        <p>Zkratka OZO znamená Odborně způsobilá osoba k zajišťování úkolů v prevenci rizik (v praxi se často říká „bezpečnostní technik“). Je to odborník, který složil státní zkoušku z oblasti bezpečnosti a ochrany zdraví při práci (BOZP) a má ze zákona oprávnění tuto oblast pro firmy zastřešovat[cite: 2].</p>
+                        
                         <h4>1. Kdy OZO v prevenci rizik potřebujete?</h4>
-                        <p>Zákoník práce je nekompromisní: Každý zaměstnavatel (každý, kdo má alespoň jednoho zaměstnance, ať už na HPP, DPČ nebo DPP) má povinnost zajistit plnění úkolů v prevenci rizik. Bezpečnost se netýká jen velkých výrobních hal, ale úplně každého – od IT agentur přes obchody, restaurace až po stavební firmy.</p>
+                        <p>Zákoník práce je nekompromisní: Každý zaměstnavatel (každý, kdo má alespoň jednoho zaměstnance, ať už na HPP, DPČ nebo DPP) má povinnost zajistit plnění úkolů v prevenci rizik[cite: 2].</p>
+                        <p>Bezpečnost se netýká jen velkých výrobních hal, ale úplně každého – od IT agentur přes obchody, restaurace až po stavební firmy[cite: 2].</p>
+
                         <h4>2. Může si to zaměstnavatel zajistit sám?</h4>
-                        <p>Teoreticky ano, zákon vám umožňuje zajišťovat si úkoly v prevenci rizik sami, ale pouze za předpokladu, že k tomu máte potřebné znalosti a počet zaměstnanců maximálně 25 osob.</p>
+                        <p>Teoreticky ano, zákon vám umožňuje zajišťovat si úkoly v prevenci rizik sami, ale pouze za předpokladu, že k tomu máte potřebné znalosti a počet zaměstnanců maximálně 25 osob[cite: 2].</p>
+
                         <h4>3. Co pro vás jako OZO v prevenci rizik uděláme my?</h4>
+                        <p>Zbavíme vás veškerého papírování. V rámci našich služeb pro vás zajistíme[cite: 2]:</p>
                         <ul>
-                            <li>Kompletní audit a nastavení BOZP na míru vašemu provozu.</li>
-                            <li>Vyhledání a vyhodnocení rizik na pracovištích.</li>
-                            <li>Zpracování povinné dokumentace (směrnice, kategorizace prací, pracovní postupy).</li>
-                            <li>Pravidelné roční prověrky pracoviště dle § 108 zákoníku práce.</li>
-                            <li>Zastupování při kontrolách z Inspektorátu práce nebo hygieny a řešení případných pracovních úrazů.</li>
+                            <li>Kompletní audit a nastavení BOZP na míru vašemu provozu[cite: 2].</li>
+                            <li>Vyhledání a vyhodnocení rizik na pracovištích[cite: 2].</li>
+                            <li>Zpracování povinné dokumentace (směrnice, kategorizace prací, pracovní postupy)[cite: 2].</li>
+                            <li>Pravidelné roční prověrky pracoviště dle § 108 zákoníku práce[cite: 2].</li>
+                            <li>Zastupování při kontrolách z Inspektorátu práce nebo hygieny a řešení případných pracovních úrazů[cite: 2].</li>
                         </ul>
                     </div>
                 </details>
@@ -442,26 +445,29 @@
                 <details class="service-card">
                     <summary>📘 ŠKOLENÍ BOZP a PO</summary>
                     <div class="service-body">
-                        <p>Zákoník práce ukládá zaměstnavatelům povinnost zajistit zaměstnancům řádné školení o bezpečnosti a ochraně zdraví při práci (BOZP) i o požární ochraně (PO). Ačkoliv pro samotná školení zákon často nestanovuje univerzální pevnou lhůtu (její četnost se odvíjí od posouzení rizik a specifika provozu – na rozdíl například od ročních prověrek pracoviště povinných dle § 108 zákoníku práce), pravidelnost a prokazatelnost školení jsou klíčové pro ochranu zdraví i vaši právní jistotu.</p>
-                        <p>Bez ohledu na to, jakou si firma nastaví vnitřní periodu, zákon předepisuje povinnost provést školení neprodleně v těchto případech:</p>
+                        <p>Zákoník práce ukládá zaměstnavatelům povinnost zajistit zaměstnancům řádné školení o bezpečnosti a ochraně zdraví při práci (BOZP) i o požární ochraně (PO)[cite: 2]. Ačkoliv pro samotná školení zákon často nestanovuje univerzální pevnou lhůtu (její četnost se odvíjí od posouzení rizik a specifika provozu – na rozdíl například od ročních prověrek pracoviště povinných dle § 108 zákoníku práce), pravidelnost a prokazatelnost školení jsou klíčové pro ochranu zdraví i vaši právní jistotu[cite: 2].</p>
+                        
+                        <p>Bez ohledu na to, jakou si firma nastaví vnitřní periodu, zákon předepisuje povinnost provést školení neprodleně v těchto případech[cite: 2]:</p>
                         <ul>
-                            <li>Při nástupu zaměstnance na nové pracoviště nebo při změně jeho pracovního zařazení.</li>
-                            <li>Při zavedení nové technologie, změně pracovních postupů nebo změně používaného vybavení.</li>
-                            <li>Po pracovním úrazu nebo mimořádné události, které mají nebo mohou mít podstatný vliv na bezpečnost a ochranu zdraví při práci.</li>
+                            <li>Při nástupu zaměstnance na nové pracoviště nebo při změně jeho pracovního zařazení[cite: 2].</li>
+                            <li>Při zavedení nové technologie, změně pracovních postupů nebo změně používaného vybavení[cite: 2].</li>
+                            <li>Po pracovním úrazu nebo mimořádné události, které mají nebo mohou mít podstatný vliv na bezpečnost a ochranu zdraví při práci[cite: 2].</li>
                         </ul>
-                        <p>Nabízíme vám komplexní zajištění školení přesně na míru vaší činnosti:</p>
+
+                        <p>Nabízíme vám komplexní zajištění školení přesně na míru vaší činnosti[cite: 2]:</p>
                         <ul>
-                            <li><strong>Školení zaměstnanců a vedoucích pracovníků</strong> – základní i opakovaná školení BOZP pro kancelářský provoz, výrobu či řemesla.</li>
-                            <li><strong>Školení požární ochrany (PO)</strong> – pro zaměstnance.</li>
-                            <li><strong>Školení pro specifické činnosti</strong> – práce ve výškách a nad volnou hloubkou, obsluha vyhrazených technických zařízení, manipulační vozíky (ještěrky).</li>
-                            <li><strong>Školení řidičů referentských vozidel</strong> – povinné pro všechny, kdo občas řídí služební auto.</li>
-                            <li><strong>Školení první pomoci</strong> – základy záchrany života s ohledem na rizika vašeho pracoviště.</li>
+                            <li><strong>Školení zaměstnanců a vedoucích pracovníků</strong> – základní i opakovaná školení BOZP pro kancelářský provoz, výrobu či řemesla[cite: 2].</li>
+                            <li><strong>Školení požární ochrany (PO)</strong> – pro zaměstnance[cite: 2].</li>
+                            <li><strong>Školení pro specifické činnosti</strong> – práce ve výškách a nad volnou hloubkou, obsluha vyhrazených technických zařízení, manipulační vozíky (ještěrky)[cite: 2].</li>
+                            <li><strong>Školení řidičů referentských vozidel</strong> – povinné pro všechny, kdo občas řídí služební auto[cite: 2].</li>
+                            <li><strong>Školení první pomoci</strong> – základy záchrany života s ohledem na rizika vašeho pracoviště[cite: 2].</li>
                         </ul>
+
                         <h4>Proč školit s námi?</h4>
                         <ul>
-                            <li>Školení přizpůsobíme reálným rizikům ve vaší firmě (žádná nudná teorie, ale praxe).</li>
-                            <li>Vystavíme přehlednou a platnou dokumentaci pro případnou kontrolu z inspektorátu práce či HZS.</li>
-                            <li>Hlídáme termíny za vás – už nezapomenete na žádné opakované přezkoušení.</li>
+                            <li>Školení přizpůsobíme reálným rizikům ve vaší firmě (žádná nudná teorie, ale praxe)[cite: 2].</li>
+                            <li>Vystavíme přehlednou a platnou dokumentaci pro případnou kontrolu z inspektorátu práce či HZS[cite: 2].</li>
+                            <li>Hlídáme termíny za vás – už nezapomenete na žádné opakované přezkoušení[cite: 2].</li>
                         </ul>
                     </div>
                 </details>
@@ -470,20 +476,28 @@
                 <details class="service-card">
                     <summary>📋 KATEGORIZACE PRACÍ</summary>
                     <div class="service-body">
-                        <p>Zjednodušeně řeчено jde o zákonnou povinnost zhodnotit a úředně zařadit každou pracovní pozici ve firmě do jedné ze čtyř kategorií (od nejméně rizikové po vysoce rizikovou). Posuzuje se přitom, jaké vlivy na zdraví zaměstnanců působí – například hluk, prach, chemikálie, fyzická zátěž, vibrace nebo psychická a zraková námaha.</p>
+                        <h4>Co je to kategorizace prací?</h4>
+                        <p>Zjednodušeně řeчено jde o zákonnou povinnost zhodnotit a úředně zařadit každou pracovní pozici ve firmě do jedné ze čtyř kategorií (od nejméně rizikové po vysoce rizikovou)[cite: 2]. Posuzuje se přitom, jaké vlivy na zdraví zaměstnanců působí – například hluk, prach, chemikálie, fyzická zátěž, vibrace nebo psychická a zraková námaha[cite: 2].</p>
+
                         <h4>Koho se to týká?</h4>
-                        <p><strong>Každý zaměstnavatel:</strong> Povinnost mít zpracovanou kategorizaci prací má každá firma i živnostník, který zaměstnává alespoň jednoho člověka (bez ohledu na to, zda jde o HPP, DPP nebo DPČ). Naopak OSVČ pracující zcela samy ji nepotřebují.</p>
-                        <h4>Jak se práce dělí (4 kategorie)?</h4>
+                        <p><strong>KAŽDÝ ZAMĚSTNAVATEL:</strong> Povinnost mít zpracovanou kategorizaci prací má každá firma i živnostník, který zaměstnává alespoň jednoho člověka (bez ohledu na to, zda jde o hlavní pracovní poměr, dohody o pracích konaných mimo pracovní poměr – DPP/DPČ)[cite: 2].</p>
+                        <p><strong>Kdo ji naopak nepotřebuje:</strong> Samostatně výdělečně činné osoby (OSVČ), které pracují zcela samy a nemají žádné zaměstnance (pro sebe samé kategorizaci neprovádějí)[cite: 2].</p>
+
+                        <h4>Jak se práce dělí? (4 kategorie)</h4>
                         <ul>
-                            <li><strong>1. kategorie:</strong> Práce s minimálním rizikem (typicky kanceláře). Nikomu se nehlásí.</li>
-                            <li><strong>2. kategorie:</strong> Zátěž nepřekračuje hygienické limity (např. dlouhé stání, práce s PC). Zaměstnanec/zaměstnavatel zařadí sám a oznámí hygieně.</li>
-                            <li><strong>3. a 4. kategorie (Rizikové práce):</strong> Překročené hygienické limity (hluk, prach, chemie). Vyžadují schválení Krajskou hygienickou stanicí (KHS) a speciální preventivní prohlídky.</li>
+                            <li><strong>1. kategorie:</strong> Práce s minimálním a přijatelným rizikem pro zdraví (typicky kancelářské profese). Nikomu se nehlásí[cite: 2].</li>
+                            <li><strong>2. kategorie:</strong> Práce, kde zátěž nepřekračuje hygienické limity, ale mohou se objevit mírné vlivy (např. dlouhé stání u prodavaček nebo práce s PC). Zaměstnavatel ji zařadí sám a oznámí hygieně[cite: 2].</li>
+                            <li><strong>3. a 4. kategorie (Rizikové práce):</strong> Práce, kde jsou překročené hygienické limity (např. nadměrný hluk ve výrobě, prašné prostředí, těžká fyzická práce nebo nebezpečné chemikálie). Tyto kategorie jsou přísně kontrolované a vyžadují schválení Krajskou hygienickou stanicí (KHS) a speciální preventivní lékařské prohlídky[cite: 2].</li>
                         </ul>
-                        <h4>S čím vám pomůžeme:</h4>
+
+                        <h4>Proč to nenechat náhodě?</h4>
+                        <p>Za chybějící nebo špatně zpracovanou kategorizaci prací udělují hygienické stanice a inspektoráty práce velmi vysoké pokuty (v řádu statisíců až milionů korun)[cite: 2].</p>
+
+                        <h4>S čím vám pomůžeme jako OZO v prevenci rizik:</h4>
                         <ul>
-                            <li>Zmapujeme vaše provozy a posoudíme pracovní pozice.</li>
-                            <li>Zajistíme odborná měření (hluk, prach, chemie) přes akreditované laboratoře.</li>
-                            <li>Připravíme dokumentaci a zajistíme úřední komunikaci s KHS za vás.</li>
+                            <li>Zmapujeme vaše provozy a reálně posoudíme jednotlivé pracovní pozice[cite: 2].</li>
+                            <li>Zajistíme případná odborná měření (hluk, prach, chemie) přes akreditované laboratoře[cite: 2].</li>
+                            <li>Připravíme kompletní dokumentaci a zajistíme veškerou úřední komunikaci a hlášení na Krajské hygienické stanici za vás[cite: 2].</li>
                         </ul>
                     </div>
                 </details>
@@ -492,19 +506,31 @@
                 <details class="service-card">
                     <summary>⚠️ Pracovní postupy a konkrétní rizika</summary>
                     <div class="service-body">
-                        <p>Zákoník práce ukládá zaměstnavateli povinnost vyhledávat rizika, hodnotit je a přijímat opatření k jejich minimalizaci. Součástí je také stanovení bezpečných pracovních postupů pro činnosti, které mohou ohrozit zdraví nebo život.</p>
-                        <h4>Kde všude jsou nezbytné?</h4>
+                        <p>Zákoník práce ukládá každému zaměstnavateli povinnost vyhledávat rizika, hodnotit je a přijímat opatření k jejich minimalizaci[cite: 2]. Nedílnou součástí této povinnosti je také stanovení bezpečných pracovních postupů pro činnosti, které mohou ohrozit zdraví nebo život zaměstnanců[cite: 2].</p>
+
+                        <h4>Co si pod tím představit v praxi?</h4>
+                        <p>Nejde o nudné teoretické tabulky do šuplíku, ale o praktické a srozumitelné návody pro vaše lidi, jak správně a bezpečně vykonávat konkrétní činnosti[cite: 2]. Každý provoz má svá specifika a zaměstnanci musí vědět, jak se vyhnout průšvihu[cite: 2].</p>
+
+                        <h4>Kde všude jsou pracovní postupy nezbytné?</h4>
                         <ul>
-                            <li>Obsluha strojů a zařízení (pily, frézy, lisy, jeřáby, ještěrky).</li>
-                            <li>Manipulace s nebezpečnými látkami (chemikálie, hořlaviny, žíraviny).</li>
-                            <li>Rizikové činnosti (práce ve výškách, údržba elektro, výkopy).</li>
-                            <li>Ruční manipulace s břemeny (sklady, stavebnictví).</li>
+                            <li>Obsluha strojů a zařízení (např. pily, frézy, lisy, manipulační vozíky, jeřáby)[cite: 2].</li>
+                            <li>Manipulace s nebezpečnými látkami (chemikálie, žíraviny, hořlaviny, toxické materiály)[cite: 2].</li>
+                            <li>Rizikové a specifické činnosti (práce ve výškách, údržba elektrických zařízení, práce v uzavřených prostorách či výkopech)[cite: 2].</li>
+                            <li>Ruční manipulace s břemeny (sklady, logistika, stavebnictví)[cite: 2].</li>
                         </ul>
+
+                        <h4>Proč mít správně zpracovaná rizika a postupy?</h4>
+                        <ul>
+                            <li><strong>Ochrana zdraví:</strong> Jasná pravidla radikálně snižují pravděpodobnost, že dojde k pracovnímu úrazu nebo poškození zdraví z povolání[cite: 2].</li>
+                            <li><strong>Právní jistota při kontrole i úrazu:</strong> V případě pracovního úrazu nebo kontroly z inspektorátu práce je to první věc, kterou úřady vyžadují[cite: 2]. Pokud postupy chybí nebo jsou zastaralé, nese plnou odpovědnost a pokutu jednatel či majitel firmy[cite: 2].</li>
+                            <li><strong>Pojištění a náhrada škody:</strong> Pojišťovny při plnění z pojistek za pracovní úrazy velmi pečlivě zkoumají, zda zaměstnanec porušil platný pracovní postup[cite: 2].</li>
+                        </ul>
+
                         <h4>S čím vám pomůžeme:</h4>
                         <ul>
-                            <li>Projdeme provozy a odhalíme reálná i skrytá rizika.</li>
-                            <li>Zpracujeme přehledné a srozumitelné pracovní postupy na míru.</li>
-                            <li>Nastavíme systém seznamování nových i stávajících zaměstnanců.</li>
+                            <li>Projdeme vaše provozy a odhalíme reálná (i skrytá) rizika, na která se často zapomíná[cite: 2].</li>
+                            <li>Zpracujeme přehledné a srozumitelné pracovní postupy na míru vašemu provozu[cite: 2].</li>
+                            <li>Nastavíme systém, jak s postupy seznamovat nové i stávající zaměstnance[cite: 2].</li>
                         </ul>
                     </div>
                 </details>
@@ -513,13 +539,21 @@
                 <details class="service-card">
                     <summary>📁 Provozní dokumentace</summary>
                     <div class="service-body">
-                        <p>Mít v pořádku provozní dokumentace je nejlepší pojistka proti pokutám a problémům při úrazu. Připravíme vám přehledné interní šablony a předpisy.</p>
-                        <h4>Co pro vás zajistíme?</h4>
+                        <p>Mít v pořádku provozní dokumentaci je nejlepší pojistka proti pokutám i problémům při pracovním úrazu[cite: 2]. Zapomeňte na univerzální vzory stažené z internetu, které na váš provoz vůbec nesedí[cite: 2]. Připravíme vám přehledné a srozumitelné interní šablony a předpisy, které vaši lidé skutečně využijí[cite: 2].</p>
+
+                        <h4>Co pro vás v této oblasti dokážeme zajistit?</h4>
                         <ul>
-                            <li>Příkazy ke svařování a pracím s otevřeným ohněm.</li>
-                            <li>Předávací protokoly („předáváky“) pro staveniště, subdodavatele či OOPP.</li>
-                            <li>Protokoly o kontrolách a prověrkách (regály, žebříky, nářadí).</li>
-                            <li>Místní provozní bezpečnostní předpisy (MPBP) pro sklady, dílny či stroje.</li>
+                            <li><strong>Příkazy ke svařování (a pracím s otevřeným ohněm):</strong> Klíčový dokument pro veškeré rizikové a ohňové práce, který jasně vymezuje pravidla, odpovědnosti a nutný požární dohled[cite: 2].</li>
+                            <li><strong>Předávací protokoly („předáváky“):</strong> Praktické šablony pro bezpečné předávání pracovišť (např. při střídání subdodavatelů nebo předání staveniště), dočasných stavebních konstrukcí či osobních ochranných pracovních prostředků[cite: 2].</li>
+                            <li><strong>Protokoly o kontrolách a prověrkách:</strong> Záznamy z pravidelných prověrek bezpečnosti práce na pracovištích, kontroly regálů, žebříků či ručního nářadí[cite: 2].</li>
+                            <li><strong>Místní provozní bezpečnostní předpisy (MPBP):</strong> Provozní řády pro sklady, dílny, manipulační vozíky (ještěrky), práce s chemickými látkami nebo obsluhu strojů[cite: 2].</li>
+                        </ul>
+
+                        <h4>Proč mít dokumentaci od nás?</h4>
+                        <ul>
+                            <li><strong>Praktičnost na 1. místě:</strong> Dokumenty nastavíme přesně podle toho, jak vaše firma reálně funguje – žádné zbytečné paragrafy navíc, ale jasná pravidla, která dávají smysl[cite: 2].</li>
+                            <li><strong>Právní jistota:</strong> Budete mít jistotu, že při kontrole z inspektorátu práce, hygieny nebo Hasičského záchranného sboru předložíte přesně to, co úřady požadují[cite: 2].</li>
+                            <li><strong>Ušetřený čas:</strong> Hotové, profesionální šablony vám i vašim vedoucím pracovníkům ušetří hodiny vymýšlení a psaní[cite: 2].</li>
                         </ul>
                     </div>
                 </details>
@@ -528,11 +562,22 @@
                 <details class="service-card">
                     <summary>🧴 Ochranné nápoje, osobní mycí a čistící prostředky</summary>
                     <div class="service-body">
-                        <p>Zaměstnavatelé mají povinnost poskytovat odpovídající mycí prostředky a ochranné nápoje na základě reálných rizik. Obyčejné mýdlo ze supermarketu ve fabrice nestačí.</p>
-                        <h4>S čím pomůžeme:</h4>
+                        <p>Zaměstnavatelé mají zákonnou povinnost poskytovat zaměstnancům odpovídající mycí, čisticí či dezinfekční prostředky i ochranné nápoje, a to na základě reálných rizik na pracovišti[cite: 2].</p>
+
+                        <h4>1. Co všechno to v praxi obnáší?</h4>
                         <ul>
-                            <li>Zhodnotíme provozy podle stupně znečištění a mikroklimatických podmínek.</li>
-                            <li>Připravíme interní předpis a výdejové tabulky na míru pro ochranu zdraví i peněženky.</li>
+                            <li><strong>Ochranné nápoje:</strong> Pokud vaši zaměstnanci pracují v horku (např. letní stavby, horké provozy, venkovní práce) nebo v nadměrném chladu, musíte jim ze zákona zajistit ochranné nápoje chránící před zátěží teplem či chladem[cite: 2].</li>
+                            <li><strong>Mycí, čisticí a dezinfekční prostředky:</strong> Podle toho, jak moc je práce špinavá nebo riziková, musíte zaměstnancům přidělovat odpovídající prostředky (průmyslové mycí pasty, ochranné a regenerační krémy na kůži, dezinfekce či specifické ručníky)[cite: 2]. Obyčejné mýdlo ze supermarketu ve fabrice nebo v autoservisu nestačí[cite: 2].</li>
+                        </ul>
+
+                        <h4>2. Proč to nepodceňovat?</h4>
+                        <p>Inspektoři práce a hygienici se při kontrolách na tyto vnitřní směrnice a evidence zaměřují velmi často[cite: 2]. Firma musí mít zpracovaný oficiální seznam pro poskytování mycích prostředků[cite: 2]. Bez těchto pravidel a prokazatelného vydávání prostředků riskují firmy zbytečné pokuty[cite: 2].</p>
+
+                        <h4>3. S čím vám pomůžeme:</h4>
+                        <ul>
+                            <li>Zhodnotíme vaše provozy a rozdělíme je podle stupně znečištění a mikroklimatických podmínek[cite: 2].</li>
+                            <li>Připravíme pro vás přehledný interní předpis a výdejové tabulky na míru pro vaše provozy[cite: 2].</li>
+                            <li>Nastavíme správný režim pro poskytování ochranných nápojů a hygienických prostředků tak, abyste splnili všechna zákonná kritéria a přitom zbytečně neutráceli za to, co nepotřebujete[cite: 2].</li>
                         </ul>
                     </div>
                 </details>
@@ -541,12 +586,28 @@
                 <details class="service-card">
                     <summary>🦺 Osobní ochranné pracovní prostředky (OOPP)</summary>
                     <div class="service-body">
-                        <p>Přilby, obuv, respirátory, svářečské kukly či rukavice. Zaměstnavatel je povinen poskytnout je bezplatně na základě analýzy rizik (§ 104 Zákoníku práce).</p>
-                        <h4>S čím vám pomůžeme:</h4>
+                        <p>Přilby, bezpečnostní obuv, respirátory, svářečské kukly, rukavice nebo úvazky pro práci ve výškách. Pokud rizika na pracovišti nelze odstranit technicky ani jinak eliminovat, má zaměstnavatel zákonnou povinnost (dle § 104 Zákoníku práce) poskytnout zaměstnancům bezplatně odpovídající OOPP[cite: 2].</p>
+                        <p>Není to však jen o tom „nakoupit boty a montérky v nejbližším hobbymarketu“. Celý proces má svá pevná pravidla, která kontroluje inspektorát práce[cite: 2].</p>
+
+                        <h4>1. Co musíte jako firma mít v pořádku?</h4>
                         <ul>
-                            <li>Sestavíme úsporný a přesný Seznam OOPP na míru pozicím.</li>
-                            <li>Připravíme vnitřní směrnici a výdejové formuláře/karty.</li>
-                            <li>Nastavíme systém evidence a revizí (např. u postrojů pro práci ve výškách).</li>
+                            <li><strong>Analýza rizik a Směrnice pro poskytování OOPP:</strong> Každé OOPP musí být vybráno na základě reálného vyhodnocení rizik na dané pozici[cite: 2]. Firma musí mít zpracovaný oficiální interní předpis (seznam), kde je přesně stanoveno, jaké ochranné prostředky a komu náleží[cite: 2].</li>
+                            <li><strong>Prokazatelné vydávání:</strong> Nestačí věci složit do skříně a říct si „kdo chce, ať si vezme“[cite: 2]. Každé vydání OOPP musí být podepsané zaměstnancem (tzv. výdejové listy/karty)[cite: 2].</li>
+                            <li><strong>Údržba, kontrola a životnost:</strong> Zaměstnavatel musí zajistit, že OOPP jsou v bezvadném stavu, pravidelně kontrolované a včas měněné za nové, jakmile se opotřebují[cite: 2].</li>
+                        </ul>
+
+                        <h4>2. Nejčastější chyby, na které úřady slyší:</h4>
+                        <ul>
+                            <li>Chybějící nebo zastaralá vnitřní směrnice pro výdej OOPP[cite: 2].</li>
+                            <li>Zaměstnanci používají ochranné prostředky bez platných certifikátů CE nebo po lhůtě expirace[cite: 2].</li>
+                            <li>Chybí evidence o tom, komu a kdy byly ochranné pomůcky předány[cite: 2].</li>
+                        </ul>
+
+                        <h4>3. S čím vám pomůžeme:</h4>
+                        <ul>
+                            <li>Zmapujeme vaše provozy a sestavíme přesný a úsporný Seznam OOPP na míru jednotlivým pozicím (žádné zbytečné nákupy drahého vybavení, kde to zákon nevyžaduje)[cite: 2].</li>
+                            <li>Připravíme pro vás kompletní vnitřní směrnici a praktické výdejové formuláře[cite: 2].</li>
+                            <li>Nastavíme systém evidence a revizí (např. u technických OOPP, jako jsou postroje či protipádová zařízení)[cite: 2].</li>
                         </ul>
                     </div>
                 </details>
@@ -555,11 +616,38 @@
                 <details class="service-card">
                     <summary>🏗️ Koordinátor BOZP na staveništi</summary>
                     <div class="service-body">
-                        <p>Jakmile na staveništi působí zaměstnanci více než jednoho zhotovitele, zákon ukládá stavebníkovi povinnost písemně určení koordinátora BOZP. Za absenci hrozí pokuty až 2 000 000 Kč.</p>
-                        <h4>Co za vás zajistíme:</h4>
+                        <p>Stavba nebo větší rekonstrukce je živý organismus, kde se potkává hned několik firem a subdodavatelů najednou[cite: 2]. Jakmile na staveništi působí zaměstnanci více než jednoho zhotovitele, zákon ukládá stavebníkovi (investorovi) povinnost písemně určení koordinátora BOZP[cite: 2].</p>
+                        <p>Za neurčení koordinátora nebo nepřipravený Plán BOZP udělují inspektoráty práce pokuty až do výše 2 000 000 Kč[cite: 2].</p>
+
+                        <h4>Kdy přesně koordinátora potřebujete?</h4>
                         <ul>
-                            <li><strong>V přípravné fázi:</strong> Zpracování Plánu BOZP, pomoc s oznámením na inspektorát práce, nastavení komunikace.</li>
-                            <li><strong>V realizační fázi:</strong> Koordinace zhotovitelů, pravidelný dohled na stavbě, právo nařídit okamžité přerušení prací při ohrožení života.</li>
+                            <li><strong>Při souběhu firem:</strong> Na stavbě pracují lidé z více firem nebo OSVČ současně či na sebe navazují[cite: 2].</li>
+                            <li><strong>Dle rozsahu stavby:</strong> Pokud předpokládané trvání prací přesáhne 30 pracovních dnů a současně na ní bude pracovat více než 20 osob najednou, nebo celkový objem prací přesáhne 500 člověkodnů[cite: 2].</li>
+                            <li><strong>U rizikových prací:</strong> Na stavbách, kde se objevují specifická rizika (práce ve výškách, výkopy, nad vodou…)[cite: 2].</li>
+                        </ul>
+
+                        <h4>Co všechno za vás zajistíme?</h4>
+                        <p><strong>1. V přípravné fázi (před zahájením stavby)[cite: 2]:</strong></p>
+                        <ul>
+                            <li>Zpracujeme Plán BOZP na míru konkrétní stavbě a harmonogramu[cite: 2].</li>
+                            <li>Pomůžeme s povinným oznámením o zahájení prací na oblastní inspektorát práce[cite: 2].</li>
+                            <li>Nastavíme pravidla komunikace a předávání informací mezi budoucími zhotoviteli[cite: 2].</li>
+                        </ul>
+                        <p><strong>2. V realizační fázi (během stavby)[cite: 2]:</strong></p>
+                        <ul>
+                            <li>Koordinujeme spolupráci a dodržování bezpečnosti mezi všemi zhotoviteli na staveništi[cite: 2].</li>
+                            <li>Pravidelně vykonáváme dohled na staveništi[cite: 2].</li>
+                            <li>Sledujeme, zda se dodržuje schválený Plán BOZP, a upozorňujeme na nedostatky dřív, než dojde k úrazu nebo kontrole[cite: 2].</li>
+                            <li>Koordinujeme činnosti zhotovitelů a informujeme je o vzájemně působících rizicích[cite: 2].</li>
+                            <li>Pomáháme zhotovitelům řešit provozní a bezpečnostní nedostatky přímo na stavbě a navrhujeme konkrétní nápravná opatření[cite: 2].</li>
+                            <li>V případě bezprostředního ohrožení života nebo zdraví máme ze zákona pravomoc nařídit okamžité přerušení prací do zjednání nápravy[cite: 2].</li>
+                        </ul>
+
+                        <h4>Proč mít koordinátora od nás?</h4>
+                        <ul>
+                            <li><strong>Ochrana investora:</strong> Přebíráme odbornou část odpovědnosti a hlídáme bezpečnost pracovníků[cite: 2].</li>
+                            <li><strong>Hladký průběh stavby:</strong> Zamezíme zbytečným konfliktům a rizikovým situacím pramenícím z chaosu na staveništi, kde „každá firma si dělá, co chce“[cite: 2].</li>
+                            <li><strong>Praktický přístup:</strong> Nejsme teoretici od stolu – stavbám rozumíme a pomáháme hledat řešení, jak věci dělat bezpečně a efektivně zároveň[cite: 2].</li>
                         </ul>
                     </div>
                 </details>
