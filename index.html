@@ -1,0 +1,303 @@
+<!DOCTYPE html>
+<html lang="cs">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Berka - Stavkonzult, s.r.o. | Služby v oblasti BOZP a PO</title>
+    <style>
+        :root {
+            --primary-color: #10b981; /* Zelená barva podle loga */
+            --primary-dark: #059669;
+            --text-color: #334155;
+            --bg-light: #f8fafc;
+            --white: #ffffff;
+            --gray-border: #e2e8f0;
+        }
+
+        * {
+            box-sizing: border-box;
+            margin: 0;
+            padding: 0;
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+        }
+
+        body {
+            color: var(--text-color);
+            line-height: 1.6;
+            background-color: var(--bg-light);
+        }
+
+        header {
+            background: var(--white);
+            box-shadow: 0 2px 4px rgba(0,0,0,0.05);
+            position: sticky;
+            top: 0;
+            z-index: 1000;
+        }
+
+        .header-container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 1rem 2rem;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            flex-wrap: wrap;
+        }
+
+        .logo h1 {
+            font-size: 1.5rem;
+            color: #1e293b;
+        }
+
+        .logo h1 span {
+            color: var(--primary-color);
+        }
+
+        nav ul {
+            display: flex;
+            list-style: none;
+            gap: 1.5rem;
+            flex-wrap: wrap;
+        }
+
+        nav a {
+            text-decoration: none;
+            color: var(--text-color);
+            font-weight: 600;
+            transition: color 0.3s;
+        }
+
+        nav a:hover {
+            color: var(--primary-color);
+        }
+
+        .hero {
+            background: linear-gradient(rgba(15, 23, 42, 0.8), rgba(15, 23, 42, 0.8)), url('https://images.unsplash.com/photo-1541888946425-d0fbb18f86f6?auto=format&fit=crop&w=1920&q=80') center/cover;
+            color: var(--white);
+            text-align: center;
+            padding: 6rem 2rem;
+        }
+
+        .hero h2 {
+            font-size: 2.5rem;
+            margin-bottom: 1rem;
+        }
+
+        .hero p {
+            font-size: 1.2rem;
+            max-width: 700px;
+            margin: 0 auto 2rem;
+            color: #cbd5e1;
+        }
+
+        .btn {
+            display: inline-block;
+            background: var(--primary-color);
+            color: var(--white);
+            padding: 0.75rem 2rem;
+            border-radius: 5px;
+            text-decoration: none;
+            font-weight: bold;
+            transition: background 0.3s;
+        }
+
+        .btn:hover {
+            background: var(--primary-dark);
+        }
+
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 4rem 2rem;
+        }
+
+        .section-title {
+            text-align: center;
+            margin-bottom: 3rem;
+        }
+
+        .section-title h2 {
+            font-size: 2rem;
+            color: #1e293b;
+            margin-bottom: 0.5rem;
+        }
+
+        .section-title p {
+            color: #64748b;
+        }
+
+        .services-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 2rem;
+        }
+
+        .service-card {
+            background: var(--white);
+            padding: 2rem;
+            border-radius: 8px;
+            box-shadow: 0 4px 6px rgba(0,0,0,0.02);
+            border-top: 4px solid var(--primary-color);
+            transition: transform 0.3s, box-shadow 0.3s;
+        }
+
+        .service-card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 10px 15px rgba(0,0,0,0.05);
+        }
+
+        .service-card h3 {
+            margin-bottom: 1rem;
+            color: #1e293b;
+            font-size: 1.3rem;
+        }
+
+        .service-card p {
+            color: #475569;
+            font-size: 0.95rem;
+            margin-bottom: 1rem;
+        }
+
+        .contact-section {
+            background: #1e293b;
+            color: var(--white);
+            padding: 4rem 2rem;
+        }
+
+        .contact-container {
+            max-width: 1200px;
+            margin: 0 auto;
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+            gap: 3rem;
+        }
+
+        .contact-info h3 {
+            margin-bottom: 1.5rem;
+            color: var(--primary-color);
+            font-size: 1.5rem;
+        }
+
+        .contact-info p {
+            margin-bottom: 0.75rem;
+            color: #cbd5e1;
+        }
+
+        footer {
+            background: #0f172a;
+            color: #94a3b8;
+            text-align: center;
+            padding: 1.5rem;
+            font-size: 0.9rem;
+        }
+
+        @media (max-width: 768px) {
+            .header-container {
+                flex-direction: column;
+                text-align: center;
+                gap: 1rem;
+            }
+            nav ul {
+                justify-content: center;
+            }
+            .hero h2 {
+                font-size: 2rem;
+            }
+        }
+    </style>
+</head>
+<body>
+
+    <header>
+        <div class="header-container">
+            <div class="logo">
+                <h1>BERKA <span>STAVKONZULT</span></h1>
+            </div>
+            <nav>
+                <ul>
+                    <li><a href="#sluzby">Služby</a></li>
+                    <li><a href="#o-nas">O nás</a></li>
+                    <li><a href="#kontakt">Kontakt</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+
+    <section class="hero">
+        <h2>Komplexní služby v oblasti BOZP a PO</h2>
+        <p>Zbavíme vás veškerého papírování, zajistíme bezpečné pracovní prostředí a plnou právní jistotu pro vaši firmu či stavbu.</p>
+        <a href="#kontakt" class="btn">Kontaktujte nás</a>
+    </section>
+
+    <section id="sluzby" class="container">
+        <div class="section-title">
+            <h2>Naše odborné služby</h2>
+            <p>Profesionální řešení na míru pro firmy, živnostníky i stavebníky</p>
+        </div>
+
+        <div class="services-grid">
+            <div class="service-card">
+                <h3>🛡️ OZO v prevenci rizik</h3>
+                <p>Zajistíme plnění úkolů v prevenci rizik, kompletní audit BOZP, vyhodnocení rizik, pravidelné roční prověrky pracoviště dle § 108 zákoníku práce a zastupování při kontrolách.</p>
+            </div>
+
+            <div class="service-card">
+                <h3>📘 Školení BOZP a PO</h3>
+                <p>Školení přizpůsobená reálným rizikům ve vaší firmě. Zajišťujeme vstupní i opakovaná školení zaměstnanců, vedoucích, požární ochrany, prací ve výškách či referentských vozidel.</p>
+            </div>
+
+            <div class="service-card">
+                <h3>📋 Kategorizace prací</h3>
+                <p>Zákonná povinnost pro každého zaměstnavatele. Zmapujeme provozy, posoudíme pracovní pozice, zajistíme měření přes akreditované laboratoře a vyřídíme hlášení na hygieně.</p>
+            </div>
+
+            <div class="service-card">
+                <h3>⚠️ Pracovní postupy a rizika</h3>
+                <p>Zpracujeme srozumitelné a praktické návody a postupy pro obsluhu strojů, manipulaci s nebezpečnými látkami či rizikové činnosti tak, aby chránily zdraví i majetek.</p>
+            </div>
+
+            <div class="service-card">
+                <h3>📁 Provozní dokumentace</h3>
+                <p>Připravíme interní předpisy, příkazy ke svařování, předávací protokoly, místní provozní bezpečnostní předpisy (MPBP) a záznamy z kontrol přesně podle potřeb vašeho provozu.</p>
+            </div>
+
+            <div class="service-card">
+                <h3>🧴 Ochranné nápoje a mycí prostředky</h3>
+                <p>Zhodnotíme stupně znečištění a mikroklimatické podmínky. Nastavíme správný režim pro poskytování mycích prostředků a ochranných nápojů dle legislativy.</p>
+            </div>
+
+            <div class="service-card">
+                <h3>🦺 Osobní ochranné pracovní prostředky (OOPP)</h3>
+                <p>Sestavíme úsporný a přesný Seznam OOPP na míru jednotlivým pozicím, připravíme vnitřní směrnice, výdejové formuláře a nastavíme systém evidence a revizí.</p>
+            </div>
+
+            <div class="service-card">
+                <h3>🏗️ Koordinátor BOZP na staveništi</h3>
+                <p>Povinnost pro stavby s více zhotoviteli. Zpracujeme Plán BOZP, zajistíme dohled na stavbě, koordinaci subdodavatelů a ochranu investora před vysokými pokutami.</p>
+            </div>
+        </div>
+    </section>
+
+    <section id="kontakt" class="contact-section">
+        <div class="contact-container">
+            <div class="contact-info">
+                <h3>Berka - Stavkonzult, s.r.o.</h3>
+                <p><strong>Adresa:</strong> Letců 899/29, Neředín, 779 00 Olomouc</p>
+                <p><strong>IČ:</strong> 03727866 | <strong>DIČ:</strong> CZ03727866</p>
+            </div>
+            <div class="contact-info">
+                <h3>Rychlý kontakt</h3>
+                <p><strong>Telefon:</strong> (+420) 722 673 633</p>
+                <p><strong>E-mail:</strong> berka-stavkonzult@seznam.cz</p>
+                <p><strong>Web:</strong> www.stavkonzult.cz</p>
+            </div>
+        </div>
+    </section>
+
+    <footer>
+        <p>&copy; 2026 Berka - Stavkonzult, s.r.o. Všechna práva vyhrazena.</p>
+    </footer>
+
+</body>
+</html>
