@@ -63,7 +63,7 @@
         nav ul {
             display: flex;
             list-style: none;
-            gap: 2rem;
+            gap: 1.5rem;
             flex-wrap: wrap;
         }
 
@@ -133,7 +133,7 @@
             color: #64748b;
         }
 
-        .about-section {
+        .about-section, .credentials-section {
             background: var(--white);
             border-radius: 12px;
             padding: 3rem;
@@ -141,26 +141,26 @@
             margin-bottom: 3rem;
         }
 
-        .about-text h3 {
+        .about-text h3, .credentials-section h3 {
             color: #1e293b;
             font-size: 1.4rem;
             margin-top: 1.5rem;
             margin-bottom: 0.75rem;
         }
 
-        .about-text p {
+        .about-text p, .credentials-section p {
             margin-bottom: 1rem;
             color: #475569;
         }
 
-        .about-text ul {
+        .about-text ul, .credentials-section ul {
             list-style-type: disc;
             margin-left: 1.5rem;
             margin-bottom: 1.5rem;
             color: #475569;
         }
 
-        .about-text li {
+        .about-text li, .credentials-section li {
             margin-bottom: 0.5rem;
         }
 
@@ -171,33 +171,83 @@
             margin-top: 1.5rem;
         }
 
-        .team-card {
+        .team-card, .cert-card {
             background: var(--bg-light);
             padding: 1.5rem;
             border-radius: 8px;
             border-left: 4px solid var(--primary-color);
         }
 
-        .team-card strong {
+        .team-card strong, .cert-card strong {
             font-size: 1.15rem;
             color: #1e293b;
             display: block;
             margin-bottom: 0.5rem;
         }
 
-        .team-card p {
+        .team-card p, .cert-card p {
             margin-bottom: 0.25rem;
             font-size: 0.95rem;
         }
 
-        .team-card a {
+        .team-card a, .cert-card a {
             color: var(--primary-dark);
             text-decoration: none;
             font-weight: 500;
         }
 
-        .team-card a:hover {
+        .team-card a:hover, .cert-card a:hover {
             text-decoration: underline;
+        }
+
+        .certs-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+            gap: 1.5rem;
+            margin-top: 1.5rem;
+            margin-bottom: 2rem;
+        }
+
+        .references-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+            gap: 1.5rem;
+            margin-top: 1.5rem;
+        }
+
+        .ref-category {
+            background: var(--bg-light);
+            padding: 1.5rem;
+            border-radius: 8px;
+        }
+
+        .ref-category h4 {
+            color: #1e293b;
+            font-size: 1.1rem;
+            margin-bottom: 0.75rem;
+            border-bottom: 2px solid var(--primary-color);
+            padding-bottom: 0.3rem;
+        }
+
+        .ref-category ul {
+            list-style-type: none;
+            margin-left: 0;
+        }
+
+        .ref-category li {
+            font-size: 0.95rem;
+            margin-bottom: 0.4rem;
+            color: #475569;
+            position: relative;
+            padding-left: 1rem;
+        }
+
+        .ref-category li::before {
+            content: "•";
+            color: var(--primary-color);
+            font-weight: bold;
+            position: absolute;
+            left: 0;
         }
 
         /* Rozbalovací sekce služeb */
@@ -359,6 +409,7 @@
             <nav>
                 <ul>
                     <li><a href="#o-nas">O nás</a></li>
+                    <li><a href="#osvedceni">Osvědčení a zkušenosti</a></li>
                     <li><a href="#sluzby">Služby</a></li>
                     <li><a href="#kontakt">Kontakt</a></li>
                 </ul>
@@ -405,6 +456,95 @@
                         <p>✉️ E-mail: <a href="mailto:lukasberkabozp@gmail.com">lukasberkabozp@gmail.com</a></p>
                     </div>
                 </div>
+            </div>
+        </section>
+
+        <!-- Nová sekce: Osvědčení a zkušenosti -->
+        <section id="osvedceni" class="credentials-section">
+            <div class="section-title" style="margin-bottom: 2rem;">
+                <h2>Osvědčení a zkušenosti</h2>
+                <p>Odborná způsobilost podložená státními zkouškami a bohatá praxe na významných projektech</p>
+            </div>
+
+            <div class="about-text">
+                <h3>Platná osvědčení a státní zkoušky</h3>
+                <p>Naše odbornost je garantována platnými osvědčeními vydanými akreditovanými subjekty podle zákona č. 309/2006 Sb.[cite: 6, 7, 8, 9]</p>
+
+                <div class="certs-grid">
+                    <div class="cert-card">
+                        <strong>Lukáš Berka</strong>
+                        <p>👷 <strong>Koordinátor BOZP na staveništi</strong></p>
+                        <p>Platnost do: 6.11.2029[cite: 6]</p>
+                        <p><a href="lukas-berka-koo.pdf" target="_blank">📄 Zobrazit osvědčení (PDF)</a></p>
+                    </div>
+                    <div class="cert-card">
+                        <strong>Lukáš Berka</strong>
+                        <p>🛡️ <strong>OZO v prevenci rizik</strong></p>
+                        <p>Platnost do: 5.5.2031[cite: 7]</p>
+                        <p><a href="lukas-berka-prev.pdf" target="_blank">📄 Zobrazit osvědčení (PDF)</a></p>
+                    </div>
+                    <div class="cert-card">
+                        <strong>Mgr. Jaroslav Berka</strong>
+                        <p>👷 <strong>Koordinátor BOZP na staveništi</strong></p>
+                        <p>Platnost do: 30.6.2028[cite: 8]</p>
+                        <p><a href="jaroslav-berka-koo.pdf" target="_blank">📄 Zobrazit osvědčení (PDF)</a></p>
+                    </div>
+                    <div class="cert-card">
+                        <strong>Mgr. Jaroslav Berka</strong>
+                        <p>🛡️ <strong>OZO v prevenci rizik</strong></p>
+                        <p>Platnost do: 29.6.2028[cite: 9]</p>
+                        <p><a href="jaroslav-berka-prev.pdf" target="_blank">📄 Zobrazit osvědčení (PDF)</a></p>
+                    </div>
+                </div>
+
+                <h3>Významné stavby a projekty, na kterých jsme působili</h3>
+                <p>Za léta naší praxe jsme úspěšně realizovali desítky projektů v oblasti infrastruktury, zdravotnictví, bytové výstavby i průmyslu:</p>
+
+                <div class="references-grid">
+                    <div class="ref-category">
+                        <h4>Nemocnice a veřejný sektor</h4>
+                        <ul>
+                            <li>FNOL – rekonstrukce a novostavba budovy U</li>
+                            <li>FNOL – obnova NKP Tabulový vrch</li>
+                        </ul>
+                    </div>
+
+                    <div class="ref-category">
+                        <h4>Infrastruktura a obce</h4>
+                        <ul>
+                            <li>Obec Tršice – vodojem</li>
+                            <li>Obec Bouzov – areál Královská louka</li>
+                            <li>Obec Dubicko – infrastruktura pro RD</li>
+                            <li>Obec Víceměřice – infrastruktura pro RD</li>
+                            <li>Obec Loučná nad Desnou – rekonstrukce komunikace</li>
+                            <li>Obec Kolšov – revitalizace zemědělského areálu</li>
+                            <li>Olomouc – rekonstrukce průtahu (silnice 35)</li>
+                            <li>Bruntál – ČOV rekonstrukce nádrží</li>
+                            <li>Přerov – obnova jímek</li>
+                        </ul>
+                    </div>
+
+                    <div class="ref-category">
+                        <h4>Bytové domy a rezidence</h4>
+                        <ul>
+                            <li>Olomouc – BD ul. Jeremiášova</li>
+                            <li>Olomouc – BD ul. Jánského</li>
+                            <li>Olomouc – residenční park Švýcarská</li>
+                            <li>Prostějov – BD ul. Okružní</li>
+                        </ul>
+                    </div>
+
+                    <div class="ref-category">
+                        <h4>Průmysl a sklady</h4>
+                        <ul>
+                            <li>Olomouc – areál East Park</li>
+                            <li>ČEPRO – rekonstrukce skladu</li>
+                            <li>Olomouc – demolice Cihelna</li>
+                            <li>Obec Loštice – skladová a logistická hala</li>
+                        </ul>
+                    </div>
+                </div>
+                <p style="margin-top: 1.5rem; text-align: center; font-style: italic; color: #64748b;">... a mnoho dalšího.</p>
             </div>
         </section>
 
