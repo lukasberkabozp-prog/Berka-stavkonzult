@@ -171,41 +171,73 @@
             margin-top: 1.5rem;
         }
 
-        .team-card, .cert-card {
+        .team-card {
             background: var(--bg-light);
             padding: 1.5rem;
             border-radius: 8px;
             border-left: 4px solid var(--primary-color);
         }
 
-        .team-card strong, .cert-card strong {
+        .team-card strong {
             font-size: 1.15rem;
             color: #1e293b;
             display: block;
             margin-bottom: 0.5rem;
         }
 
-        .team-card p, .cert-card p {
+        .team-card p {
             margin-bottom: 0.25rem;
             font-size: 0.95rem;
         }
 
-        .team-card a, .cert-card a {
+        .team-card a {
             color: var(--primary-dark);
             text-decoration: none;
             font-weight: 500;
         }
 
-        .team-card a:hover, .cert-card a:hover {
+        .team-card a:hover {
             text-decoration: underline;
         }
 
+        /* Zmenšené karty pro osvědčení */
         .certs-grid {
             display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
-            gap: 1.5rem;
-            margin-top: 1.5rem;
+            grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+            gap: 1rem;
+            margin-top: 1rem;
             margin-bottom: 2rem;
+        }
+
+        .cert-card {
+            background: var(--bg-light);
+            padding: 1rem;
+            border-radius: 6px;
+            border-left: 3px solid var(--primary-color);
+            font-size: 0.9rem;
+        }
+
+        .cert-card strong {
+            font-size: 1rem;
+            color: #1e293b;
+            display: block;
+            margin-bottom: 0.25rem;
+        }
+
+        .cert-card p {
+            margin-bottom: 0.2rem;
+            font-size: 0.85rem;
+        }
+
+        .cert-card a {
+            color: var(--primary-dark);
+            text-decoration: none;
+            font-weight: 500;
+            font-size: 0.85rem;
+        }
+
+        .cert-card a:hover {
+            text-decoration: underline;
         }
 
         .references-grid {
@@ -468,31 +500,31 @@
 
             <div class="about-text">
                 <h3>Platná osvědčení a státní zkoušky</h3>
-                <p>Naše odbornost je garantována platnými osvědčeními vydanými akreditovanými subjekty podle zákona č. 309/2006 Sb.[cite: 6, 7, 8, 9]</p>
+                <p>Naše odbornost je garantována platnými osvědčeními vydanými akreditovanými subjekty podle zákona č. 309/2006 Sb.</p>
 
                 <div class="certs-grid">
                     <div class="cert-card">
                         <strong>Lukáš Berka</strong>
-                        <p>👷 <strong>Koordinátor BOZP na staveništi</strong></p>
-                        <p>Platnost do: 6.11.2029[cite: 6]</p>
+                        <p>👷 <strong>Koordinátor BOZP</strong></p>
+                        <p>Platnost do: 6.11.2029</p>
                         <p><a href="lukas-berka-koo.pdf" target="_blank">📄 Zobrazit osvědčení (PDF)</a></p>
                     </div>
                     <div class="cert-card">
                         <strong>Lukáš Berka</strong>
                         <p>🛡️ <strong>OZO v prevenci rizik</strong></p>
-                        <p>Platnost do: 5.5.2031[cite: 7]</p>
+                        <p>Platnost do: 5.5.2031</p>
                         <p><a href="lukas-berka-prev.pdf" target="_blank">📄 Zobrazit osvědčení (PDF)</a></p>
                     </div>
                     <div class="cert-card">
                         <strong>Mgr. Jaroslav Berka</strong>
-                        <p>👷 <strong>Koordinátor BOZP na staveništi</strong></p>
-                        <p>Platnost do: 30.6.2028[cite: 8]</p>
+                        <p>👷 <strong>Koordinátor BOZP</strong></p>
+                        <p>Platnost do: 30.6.2028</p>
                         <p><a href="jaroslav-berka-koo.pdf" target="_blank">📄 Zobrazit osvědčení (PDF)</a></p>
                     </div>
                     <div class="cert-card">
                         <strong>Mgr. Jaroslav Berka</strong>
                         <p>🛡️ <strong>OZO v prevenci rizik</strong></p>
-                        <p>Platnost do: 29.6.2028[cite: 9]</p>
+                        <p>Platnost do: 29.6.2028</p>
                         <p><a href="jaroslav-berka-prev.pdf" target="_blank">📄 Zobrazit osvědčení (PDF)</a></p>
                     </div>
                 </div>
@@ -505,7 +537,9 @@
                         <h4>Nemocnice a veřejný sektor</h4>
                         <ul>
                             <li>FNOL – rekonstrukce a novostavba budovy U</li>
+                            <li>FNOL – přístavba budovy XN</li>
                             <li>FNOL – obnova NKP Tabulový vrch</li>
+                            <li>Obec Droždín – rekonstrukce základní školy</li>
                         </ul>
                     </div>
 
@@ -527,20 +561,29 @@
                     <div class="ref-category">
                         <h4>Bytové domy a rezidence</h4>
                         <ul>
+                            <li>Krnov – residenční park Kasárny</li>
+                            <li>Olomouc – residenční park Švýcarská</li>
                             <li>Olomouc – BD ul. Jeremiášova</li>
                             <li>Olomouc – BD ul. Jánského</li>
-                            <li>Olomouc – residenční park Švýcarská</li>
+                            <li>Olomouc – BD Slavonínská</li>
+                            <li>Olomouc – BD Zlaté terasy</li>
                             <li>Prostějov – BD ul. Okružní</li>
                         </ul>
                     </div>
 
                     <div class="ref-category">
-                        <h4>Průmysl a sklady</h4>
+                        <h4>Průmysl, obchody a speciální stavby</h4>
                         <ul>
+                            <li>Olomouc – obchodní dům Šantovka</li>
+                            <li>Olomouc – sanatorium Okružní</li>
+                            <li>Veolia – obnova kotlů ŠVOL</li>
                             <li>Olomouc – areál East Park</li>
                             <li>ČEPRO – rekonstrukce skladu</li>
                             <li>Olomouc – demolice Cihelna</li>
+                            <li>Olomouc – demolice ul. Velkomoravská</li>
+                            <li>Pardubice – demolice Kondor</li>
                             <li>Obec Loštice – skladová a logistická hala</li>
+                            <li>Olomouc – mycí centrum</li>
                         </ul>
                     </div>
                 </div>
